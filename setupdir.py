@@ -1,17 +1,21 @@
 #!/usr/bin/env python
 
+# Script should be in the directory where SOURCE_DIR and TARGET_DIR are also
+# located.
 
 import zipfile as z
 import gzip, tarfile
 import os,sys
 import re
 
+SOURCE_DIR = '/hw2_zips'
+TARGET_DIR = '/hw2_extracted'
 # Check & Create directory for extracted files
 cwd = os.getcwd()
-source = cwd + '/hw1_test'
-target = cwd + '/py_extracted'
+source = cwd + SOURCE_DIR
+target = cwd + TARGET_DIR
 if not os.path.exists(source):
-    sys.exit('Source folder *hw1_test* doesn\'t exist')
+    sys.exit('Source folder doesn\'t exist')
 if not os.path.exists(target):
     os.makedirs(target)
 

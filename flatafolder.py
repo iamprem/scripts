@@ -3,8 +3,10 @@ import os
 
 # copy all the files in the subfolders to main folder
 
+# EXTRACTED_DIR is where all folders are extracted by setupdir.py Script
+EXTRACTED_DIR = '/hw2_extracted'
 # Go to extracted directory
-hw_dir = os.getcwd() + '/' + 'py_extracted'
+hw_dir = os.getcwd() + EXTRACTED_DIR
 studentdirs = os.listdir(hw_dir)
 
 for student in studentdirs:
